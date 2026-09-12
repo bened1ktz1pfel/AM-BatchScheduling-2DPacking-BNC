@@ -15,17 +15,20 @@ Consequently, we are facing an integrated problem over (unrelated) parallel mach
 
 ![Illustration of the planning problem](PlanningProblem.jpg)
 
+*Example instance with ten parts and two machines, and a possible feasible solution with three batches, sequenced across the two machines. Figure from [Zipfel, Tamke & Kuttner (2025)](https://doi.org/10.1016/j.ejor.2024.10.040),
+CC BY 4.0.*
+
 ## Approach
 
-To solve this problem, we first introduced a monolithic model formulation as a mixed-integer linear program. The core of this work is the solver that implements an exact approach based on logic-based Benders decomposition. We split the problem into a master and a subproblem. The master problem is a MIP for scheduling on unrelated parallel batch processor machines, minimising makespan. It assigns parts to batches and machines and sequences the batches. A batch's processing time is not a max or a sum over its jobs, as in classical batch scheduling. It depends on the scan time for the batch's total volume plus the recoating time for the tallest part in it. Geometry therefore feeds directly into the objective, which is what forces the two subproblems together. For every incumbent, each non-empty batch is checked as a two-dimensional orthogonal packing problem with rotation (2D-OPR), and any batch proven unpackable yields a no-good cut. Feasibility checking is where most of the runtime goes, so the subproblem extends state-of-the-art techniques for orthogonal packing with rotation.
+To solve this problem, we first introduced a monolithic model formulation as a mixed-integer linear program. In this repository, we developed a solver that implements an exact approach based on logic-based Benders decomposition. We split the problem into a master and a subproblem. The master problem is a MIP for scheduling on unrelated parallel batch processor machines, minimising makespan. It assigns parts to batches and machines and sequences the batches. A batch's processing time is not a max or a sum over its jobs, as in classical batch scheduling. It depends on the scan time for the batch's total volume plus the recoating time for the tallest part in it. Geometry therefore feeds directly into the objective, which is what forces the two subproblems together. For every incumbent, each non-empty batch is checked as a two-dimensional orthogonal packing problem with rotation (2D-OPR), and any batch proven unpackable yields a no-good cut. Feasibility checking is where most of the runtime goes, so the subproblem extends state-of-the-art techniques for orthogonal packing with rotation.
 
-## Key design decisions.
+### Key design decisions:
 - *Feasibility checking as a cascade.* Solving the 2D-OPR exactly is
-  expensive, so we try to identify infeasibility cheaply first: preprocessing, then two lower bounds, then a bar relaxation solved by column generation, and only then an exact CP model. Most infeasible batches can be found before the exact step, which is where the runtime savings come from. If this is the case, the algorithm immediately exits the checking procedures in the subproblem and adds a no-good cut to the master problem.
+  expensive, so we try to identify infeasibility cheaply first: (I) preprocessing, (II) two lower bounds, and (III) a bar relaxation solved by column generation. Only when infeasibility is not proven by the subsequent approaches, an exact CP model is built and solved. Most infeasible batches can be found before the exact step, which is where the runtime savings come from. If this is the case, the algorithm immediately exits the checking procedures in the subproblem and adds a no-good cut to the master problem. 
 - *Rotation had to be threaded through every component.* Each adapted  technique (normal patterns, meet-in-the-middle placement points, the bar relaxation's pricing subproblem, the item-enlargement procedure) assumes fixed orientation in its published form. Consequently, all methods needed extension to handle 90-degree rotation.
 - *Cut strengthening and lifting.* Raw no-good cuts over large batches are weak, so each infeasible set is heuristically reduced to a smaller infeasible subset and the cut is lifted. Lifting is expensive per cut but cuts the total number of cuts by an order of magnitude on hard instances and the total runtime with it.
 - *Avoiding the hardest packings rather than solving them.* The dominant failure mode is getting stuck on batches with 97–100% area utilisation, which are hard to decide and rarely feasible anyway. A two-step variant first solves with batch area capped at 90%, then warm-starts the unrestricted run from that solution.
-- *Off-the-shelf solvers.* The 2D-OPR is handled by a general CP model rather than a tailored packing algorithm, so the approach stays replicable and language-agnostic.
+- *Off-the-shelf solvers.* The 2D-OPR is handled by a general CP model rather than a tailored packing algorithm, so the approach stays replicable and language-agnostic. In this realm, we also compared a CP model built with OR-Tools with a CP model with CP Optimizer and another exact Branch&Cut approach from [Delorme et al. (2017)](https://doi.org/10.1016/j.cor.2016.09.009).
 
 ## Structure
 
@@ -57,9 +60,6 @@ src/
 data/                       Test instances (n10m2 ... n80m5) and packing benchmark data
 
 results/
-  BNC_FORT/                 B&C results — full variant (OR-Tools)
-  BNC_PORT/                 B&C results — full variant with pre-solve (OR-Tools)
-  BNC_TV/                   B&C results — test variant
   MIP/                      Monolithic MIP results
 ```
 
@@ -109,7 +109,7 @@ Available solver variants:
 
 | ID | Short name | Description |
 |----|------------|-------------|
-| 1  | TV         | Test variant (CPLEX packing) |
+| 1  | TV         | Test variant (OR-Tools packing) |
 | 2  | BV         | Base variant — no preprocessing, no relaxations |
 | 3  | FORT       | Full variant (OR-Tools packing) |
 | 6  | PORT       | Full variant with two-step pre-solve (OR-Tools) |
@@ -121,5 +121,9 @@ Available solver variants:
 | 12 | NISV       | No initial solution variant |
 | 13 | NPHNLV     | No packing heuristic, no lifting |
 | 14 | NPHV       | No packing heuristic, with lifting |
+
+## Additional note
+
+This repository is an accessible version of the original code that was cleaned from former legacy files and result files. If you are interested in the result files, we refer to the [data repository](https://data.mendeley.com/preview/k4vvbvf5kb?a=6b4d984e-f13c-4eee-a87a-ba164838aa6f) provided with the manuscript.
 
 Last tested using Python 3.9 and GUROBI 12.0.3 in September 2026.
