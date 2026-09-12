@@ -1,0 +1,137 @@
+
+Gurobi 10.0.0 (win64) logging started Sat Jan 27 00:06:33 2024
+
+Set parameter LogFile to value "C:/Users\Administrator\Documents\BNC_Repo\BNC_Tests\10_MIP_Results\n80m5\Instance_Class2_Parts80_Machines5_Instance1_logfileChe1021.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (win64)
+
+CPU model: AMD EPYC 7513 32-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 24 physical cores, 24 logical processors, using up to 8 threads
+
+Optimize a model with 1483435 rows, 78321 columns and 8327109 nonzeros
+Model fingerprint: 0x16bbba75
+Variable types: 32961 continuous, 45360 integer (45360 binary)
+Coefficient statistics:
+  Matrix range     [3e-06, 4e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 6e+02]
+Presolve removed 136500 rows and 32582 columns (presolve time = 5s) ...
+Presolve removed 136500 rows and 32582 columns (presolve time = 10s) ...
+Presolve removed 173300 rows and 32582 columns (presolve time = 15s) ...
+Presolve removed 173300 rows and 32582 columns (presolve time = 20s) ...
+Presolve removed 173300 rows and 32582 columns (presolve time = 25s) ...
+Presolve removed 174336 rows and 33862 columns (presolve time = 30s) ...
+Presolve removed 268736 rows and 33862 columns (presolve time = 35s) ...
+Presolve removed 271280 rows and 33862 columns (presolve time = 40s) ...
+Presolve removed 271280 rows and 33862 columns (presolve time = 45s) ...
+Presolve removed 271280 rows and 33862 columns (presolve time = 50s) ...
+Presolve removed 271280 rows and 33862 columns (presolve time = 55s) ...
+Presolve removed 271280 rows and 33862 columns
+Presolve time: 58.58s
+Presolved: 1212155 rows, 44459 columns, 7138749 nonzeros
+Variable types: 561 continuous, 43898 integer (43498 binary)
+Found heuristic solution: objective 4869.5120000
+Found heuristic solution: objective 471.8417000
+Root relaxation presolve removed 0 rows and 0 columns (presolve time = 5s) ...
+Root relaxation presolve removed 0 rows and 0 columns (presolve time = 10s) ...
+Root relaxation presolve removed 0 rows and 0 columns (presolve time = 15s) ...
+Root relaxation presolved: 44459 rows, 1256614 columns, 7183208 nonzeros
+
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 1.75s
+
+Barrier statistics:
+ Dense cols : 61
+ Free vars  : 59
+ AA' NZ     : 1.888e+06
+ Factor NZ  : 4.580e+07 (roughly 500 MB of memory)
+ Factor Ops : 1.935e+11 (roughly 1 second per iteration)
+ Threads    : 6
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0  -1.78179061e+06 -0.00000000e+00  8.90e+01 3.20e+01  6.68e+01    92s
+   1  -7.24025858e+05  6.30472467e+01  2.30e+01 6.19e+01  2.24e+01    93s
+   2  -4.60211211e+05  4.21319202e+02  9.10e-01 1.72e+01  4.92e+00    94s
+   3  -2.61942471e+05  4.47861218e+02  9.31e-02 1.93e+00  1.32e+00    94s
+   4  -3.83306304e+04  4.52375833e+02  1.16e-02 5.24e-01  1.88e-01    95s
+   5  -7.00169078e+03  4.38037578e+02  1.61e-03 1.21e-02  3.08e-02    96s
+   6  -3.80149413e+03  2.50142209e+02  8.70e-04 4.03e-03  1.66e-02    96s
+   7  -5.35880491e+02  1.11852666e+02  7.79e-05 3.12e-02  2.61e-03    97s
+   8   1.68731441e+01  8.12226108e+01  1.08e-06 1.25e-02  2.57e-04    98s
+   9   6.33587667e+01  7.57351943e+01  1.78e-07 2.85e-03  4.95e-05    99s
+  10   7.16482481e+01  7.50502069e+01  4.03e-08 9.53e-04  1.36e-05   100s
+  11   7.45102436e+01  7.48289695e+01  2.40e-09 4.42e-05  1.27e-06   102s
+  12   7.47760767e+01  7.48056064e+01  1.47e-10 6.64e-07  1.18e-07   103s
+  13   7.48016150e+01  7.48042535e+01  1.10e-11 3.06e-08  1.05e-08   104s
+  14   7.48039432e+01  7.48041401e+01  1.68e-09 7.32e-11  7.86e-10   105s
+
+Barrier performed 14 iterations in 105.19 seconds (261.09 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+Concurrent spin time: 0.19s
+
+Solved with dual simplex
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   11409    7.4804133e+01   0.000000e+00   0.000000e+00    105s
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root crossover log...
+
+     409 DPushes remaining with DInf 0.0000000e+00               106s
+       0 DPushes remaining with DInf 0.0000000e+00               107s
+
+     740 PPushes remaining with PInf 0.0000000e+00               107s
+       0 PPushes remaining with PInf 0.0000000e+00               107s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 5.5231264e-13    107s
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   12529    7.4804133e+01   0.000000e+00   0.000000e+00    107s
+   12529    7.4804133e+01   0.000000e+00   0.000000e+00    108s
+   12529    7.4804133e+01   0.000000e+00   0.000000e+00    108s
+
+Root relaxation: objective 7.480413e+01, 12529 iterations, 41.31 seconds (89.31 work units)
+Total elapsed time = 439.71s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   74.80413    0 3796  471.84170   74.80413  84.1%     -  678s
+     0     0   74.80413    0 1198  471.84170   74.80413  84.1%     -  843s
+H    0     0                     370.8805200   74.80413  79.8%     -  847s
+     0     0   74.81022    0 4105  370.88052   74.81022  79.8%     - 3376s
+     0     0          -    0       370.88052   74.81022  79.8%     - 3600s
+
+Cutting planes:
+  Gomory: 9
+  Cover: 27
+  Implied bound: 11109
+  Clique: 259
+  MIR: 1331
+  StrongCG: 2300
+  Flow cover: 3124
+  Zero half: 272
+  RLT: 1850
+  Relax-and-lift: 144
+
+Explored 1 nodes (261663 simplex iterations) in 3600.13 seconds (11200.33 work units)
+Thread count was 8 (of 24 available processors)
+
+Solution count 4: 370.881 370.881 471.842 4869.51 
+
+Time limit reached
+Warning: max constraint violation (4.1439e-06) exceeds tolerance
+Warning: max bound violation (4.1439e-06) exceeds tolerance
+Best objective 3.708805199996e+02, best bound 7.481021541051e+01, gap 79.8290%

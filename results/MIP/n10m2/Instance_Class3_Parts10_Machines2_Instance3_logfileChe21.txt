@@ -1,0 +1,40 @@
+
+Gurobi 10.0.0 (win64) logging started Fri Jan 26 07:54:47 2024
+
+Set parameter LogFile to value "C:/Users\Administrator\Documents\BNC_Repo\BNC_Tests\10_MIP_Results\n10m2\Instance_Class3_Parts10_Machines2_Instance3_logfileChe21.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (win64)
+
+CPU model: AMD EPYC 7513 32-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 24 physical cores, 24 logical processors, using up to 8 threads
+
+Optimize a model with 2578 rows, 701 columns and 11224 nonzeros
+Model fingerprint: 0x47785878
+Variable types: 261 continuous, 440 integer (440 binary)
+Coefficient statistics:
+  Matrix range     [4e-06, 4e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 6e+02]
+Presolve removed 1425 rows and 272 columns
+Presolve time: 0.01s
+Presolved: 1153 rows, 429 columns, 7514 nonzeros
+Variable types: 40 continuous, 389 integer (369 binary)
+Found heuristic solution: objective 105.5141400
+Root relaxation presolved: 1153 rows, 429 columns, 7514 nonzeros
+
+
+Root relaxation: objective 6.793008e+01, 262 iterations, 0.01 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+H    0     0                      67.9300800    2.00000  97.1%     -    0s
+     0     0          -    0        67.93008   67.93008  0.00%     -    0s
+
+Explored 1 nodes (492 simplex iterations) in 0.04 seconds (0.04 work units)
+Thread count was 8 (of 24 available processors)
+
+Solution count 3: 67.9301 67.9301 105.514 
+
+Optimal solution found (tolerance 7.00e-06)
+Best objective 6.793008000000e+01, best bound 6.793008000000e+01, gap 0.0000%

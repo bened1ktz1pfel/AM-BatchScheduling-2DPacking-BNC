@@ -1,0 +1,144 @@
+
+Gurobi 10.0.0 (win64) logging started Sat Jan 27 11:13:18 2024
+
+Set parameter LogFile to value "C:/Users\Administrator\Documents\BNC_Repo\BNC_Tests\10_MIP_Results\n80m5\Instance_Class2_Parts80_Machines5_Instance5_logfileChe21.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (win64)
+
+CPU model: AMD EPYC 7513 32-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 24 physical cores, 24 logical processors, using up to 8 threads
+
+Optimize a model with 1483435 rows, 78321 columns and 8354225 nonzeros
+Model fingerprint: 0x87cbdfd5
+Variable types: 32961 continuous, 45360 integer (45360 binary)
+Coefficient statistics:
+  Matrix range     [4e-06, 5e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 109934 rows and 32572 columns (presolve time = 5s) ...
+Presolve removed 109934 rows and 32572 columns (presolve time = 10s) ...
+Presolve removed 160492 rows and 32572 columns (presolve time = 15s) ...
+Presolve removed 160492 rows and 32572 columns (presolve time = 20s) ...
+Presolve removed 160492 rows and 32572 columns (presolve time = 25s) ...
+Presolve removed 160492 rows and 33692 columns (presolve time = 30s) ...
+Presolve removed 240544 rows and 33698 columns (presolve time = 35s) ...
+Presolve removed 240544 rows and 33698 columns (presolve time = 40s) ...
+Presolve removed 240578 rows and 33698 columns (presolve time = 45s) ...
+Presolve removed 240578 rows and 33698 columns (presolve time = 50s) ...
+Presolve removed 240578 rows and 33698 columns
+Presolve time: 53.27s
+Presolved: 1242857 rows, 44623 columns, 7282153 nonzeros
+Variable types: 561 continuous, 44062 integer (43662 binary)
+Found heuristic solution: objective 2475.1728000
+Root relaxation presolve removed 0 rows and 0 columns (presolve time = 5s) ...
+Root relaxation presolve removed 0 rows and 0 columns (presolve time = 10s) ...
+Root relaxation presolve removed 0 rows and 0 columns (presolve time = 15s) ...
+Root relaxation presolve removed 0 rows and 0 columns (presolve time = 20s) ...
+Root relaxation presolved: 44623 rows, 1287480 columns, 7326776 nonzeros
+
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 4.05s
+
+Barrier statistics:
+ Dense cols : 57
+ Free vars  : 57
+ AA' NZ     : 1.874e+06
+ Factor NZ  : 5.005e+07 (roughly 500 MB of memory)
+ Factor Ops : 2.198e+11 (roughly 2 seconds per iteration)
+ Threads    : 6
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0  -2.84205043e+06 -0.00000000e+00  8.90e+01 3.20e+01  3.01e+02    95s
+   1  -1.74901687e+06  3.16431300e+02  4.54e+01 3.98e+02  1.73e+02    96s
+   2  -1.19640641e+06  2.05924618e+03  2.65e+00 1.67e+02  4.79e+01    96s
+   3  -9.28273869e+05  2.36668054e+03  1.63e-02 1.89e+01  7.83e+00    97s
+   4  -3.82724109e+05  2.35243399e+03  2.11e-03 6.71e+00  2.39e+00    98s
+   5  -2.50622650e+05  2.21216172e+03  1.15e-03 4.50e+00  1.46e+00    99s
+   6  -6.66218482e+04  6.00004425e+02  1.88e-04 1.39e+00  3.61e-01   100s
+   7  -9.17841557e+03  3.57556691e+02  1.67e-05 2.03e-01  4.81e-02   100s
+   8  -2.18576375e+03  2.22324441e+02  7.45e-06 7.78e-03  9.78e-03   101s
+   9  -1.17729427e+02  8.48886805e+01  9.21e-05 5.69e-03  8.12e-04   102s
+  10   1.88656296e+01  5.85715278e+01  1.73e-05 1.05e-03  1.59e-04   103s
+  11   4.06006290e+01  5.29055512e+01  4.82e-06 3.21e-04  4.93e-05   104s
+  12   4.40140835e+01  5.20042543e+01  3.10e-06 2.10e-04  3.20e-05   106s
+  13   4.52039494e+01  5.17647636e+01  2.51e-06 1.80e-04  2.63e-05   107s
+  14   4.71084892e+01  5.09547557e+01  1.54e-06 7.82e-05  1.54e-05   108s
+  15   4.77666927e+01  5.07632784e+01  1.23e-06 4.87e-05  1.20e-05   110s
+  16   4.94195313e+01  5.06495804e+01  4.78e-07 1.63e-05  4.93e-06   111s
+  17   5.02646926e+01  5.05881965e+01  1.01e-07 6.37e-06  1.30e-06   112s
+  18   5.04161769e+01  5.05500201e+01  4.24e-08 1.42e-06  5.36e-07   114s
+  19   5.05148657e+01  5.05384087e+01  6.47e-09 1.91e-08  9.43e-08   115s
+  20   5.05354627e+01  5.05372338e+01  3.65e-10 3.51e-09  7.09e-09   116s
+  21   5.05370203e+01  5.05370911e+01  8.46e-12 1.16e-10  2.83e-10   118s
+  22   5.05370304e+01  5.05370898e+01  5.06e-09 8.30e-11  2.38e-10   119s
+  23   5.05370840e+01  5.05370863e+01  4.93e-10 2.73e-12  9.27e-12   120s
+  24   5.05370843e+01  5.05370863e+01  7.58e-08 1.82e-12  8.39e-12   122s
+
+Barrier performed 24 iterations in 121.84 seconds (293.43 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+Concurrent spin time: 3.41s (can be avoided by choosing Method=3)
+
+Solved with dual simplex
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   24753    5.0537086e+01   0.000000e+00   0.000000e+00    122s
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root crossover log...
+
+     332 DPushes remaining with DInf 0.0000000e+00               122s
+       0 DPushes remaining with DInf 0.0000000e+00               123s
+
+    2395 PPushes remaining with PInf 0.0000000e+00               123s
+       0 PPushes remaining with PInf 0.0000000e+00               123s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 3.0040942e-13    123s
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   27410    5.0537086e+01   0.000000e+00   0.000000e+00    123s
+   27410    5.0537086e+01   0.000000e+00   0.000000e+00    123s
+   27410    5.0537086e+01   0.000000e+00   0.000000e+00    124s
+
+Root relaxation: objective 5.053709e+01, 27410 iterations, 61.99 seconds (108.83 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   50.53709    0 5038 2475.17280   50.53709  98.0%     -  401s
+H    0     0                    1157.2426400   50.53709  95.6%     -  404s
+     0     0   50.56564    0 3817 1157.24264   50.56564  95.6%     - 1284s
+H    0     0                      93.8944200   50.56564  46.1%     - 1397s
+     0     0   50.57945    0 2925   93.89442   50.57945  46.1%     - 2490s
+     0     0          -    0        93.89442   50.57945  46.1%     - 3600s
+
+Cutting planes:
+  Learned: 9
+  Cover: 9
+  Implied bound: 376
+  Clique: 132
+  MIR: 9002
+  StrongCG: 9995
+  Flow cover: 5747
+  RLT: 77
+  Relax-and-lift: 253
+  BQP: 4
+
+Explored 1 nodes (361648 simplex iterations) in 3600.12 seconds (10810.34 work units)
+Thread count was 8 (of 24 available processors)
+
+Solution count 4: 93.8944 93.8944 1157.24 2475.17 
+
+Time limit reached
+Best objective 9.389442000000e+01, best bound 5.057944737334e+01, gap 46.1316%

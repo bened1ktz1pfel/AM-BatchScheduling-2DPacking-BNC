@@ -1,0 +1,148 @@
+
+Gurobi 10.0.0 (win64) logging started Mon Jan 22 13:40:22 2024
+
+Set parameter LogFile to value "C:/Users\Administrator\Documents\BNC_Repo\BNC_Tests\10_MIP_Results\n60m2\Instance_Class1_Parts60_Machines2_Instance3_logfileChe21.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (win64)
+
+CPU model: AMD EPYC 7513 32-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 24 physical cores, 24 logical processors, using up to 8 threads
+
+Optimize a model with 270478 rows, 22201 columns and 1483374 nonzeros
+Model fingerprint: 0x68109b2d
+Variable types: 7561 continuous, 14640 integer (14640 binary)
+Coefficient statistics:
+  Matrix range     [4e-06, 5e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 36111 rows and 7431 columns (presolve time = 5s) ...
+Presolve removed 36249 rows and 7449 columns
+Presolve time: 7.12s
+Presolved: 234229 rows, 14752 columns, 1352720 nonzeros
+Variable types: 240 continuous, 14512 integer (14392 binary)
+Root relaxation presolved: 14752 rows, 248861 columns, 1367352 nonzeros
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0   -0.0000000e+00   0.000000e+00   8.563717e+03     39s
+    3703    1.9448835e+00   0.000000e+00   2.056730e+06     40s
+Concurrent spin time: 0.00s
+
+Solved with dual simplex
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    8488    9.2515081e+01   0.000000e+00   0.000000e+00     42s
+Extra simplex iterations after uncrush: 10
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root crossover log...
+
+      22 DPushes remaining with DInf 0.0000000e+00                42s
+       0 DPushes remaining with DInf 0.0000000e+00                42s
+
+    2590 PPushes remaining with PInf 0.0000000e+00                42s
+       0 PPushes remaining with PInf 0.0000000e+00                42s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 1.1665668e-13     42s
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   11103    9.2515081e+01   0.000000e+00   0.000000e+00     42s
+   11103    9.2515081e+01   0.000000e+00   0.000000e+00     42s
+   11103    9.2515081e+01   0.000000e+00   0.000000e+00     42s
+
+Root relaxation: objective 9.251508e+01, 11103 iterations, 6.01 seconds (9.10 work units)
+Total elapsed time = 46.28s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   92.51508    0  327          -   92.51508      -     -   49s
+H    0     0                     981.7817200   92.51508  90.6%     -   50s
+H    0     0                     980.5298800   92.51508  90.6%     -   50s
+     0     0   92.58443    0 5267  980.52988   92.58443  90.6%     -  119s
+     0     0   92.58443    0 4899  980.52988   92.58443  90.6%     -  159s
+     0     0   92.58459    0 4201  980.52988   92.58459  90.6%     -  188s
+H    0     0                     479.8997200   92.58459  80.7%     -  192s
+     0     0   92.59657    0 3464  479.89972   92.59657  80.7%     -  267s
+     0     0   92.61414    0 2805  479.89972   92.61414  80.7%     -  417s
+H    0     0                     464.3771600   92.61414  80.1%     -  420s
+     0     0   92.61697    0 2107  464.37716   92.61697  80.1%     -  470s
+     0     0   92.64679    0 2894  464.37716   92.64679  80.0%     -  610s
+H    0     0                     336.5838000   92.64679  72.5%     -  615s
+     0     0   92.66744    0 1590  336.58380   92.66744  72.5%     -  667s
+     0     0   92.66899    0 2557  336.58380   92.66899  72.5%     -  800s
+H    0     0                     329.7935600   92.66899  71.9%     -  802s
+     0     0   92.72535    0 3603  329.79356   92.72535  71.9%     -  866s
+     0     0   92.73142    0 1766  329.79356   92.73142  71.9%     - 1014s
+H    0     0                     327.7711200   92.73142  71.7%     - 1018s
+     0     0   92.81399    0 3153  327.77112   92.81399  71.7%     - 1130s
+     0     0   92.91831    0 1785  327.77112   92.91831  71.7%     - 1307s
+H    0     0                     287.3768600   92.91831  67.7%     - 1309s
+     0     0   93.17515    0  894  287.37686   93.17515  67.6%     - 1372s
+     0     0   93.22539    0 1414  287.37686   93.22539  67.6%     - 1512s
+H    0     0                     275.2041800   93.22539  66.1%     - 1514s
+     0     0   93.26241    0 1784  275.20418   93.26241  66.1%     - 1624s
+     0     0   93.26943    0  930  275.20418   93.26943  66.1%     - 1732s
+     0     0   93.27165    0 1042  275.20418   93.27165  66.1%     - 1776s
+     0     0   93.27199    0  919  275.20418   93.27199  66.1%     - 1812s
+     0     0   93.27315    0  969  275.20418   93.27315  66.1%     - 1833s
+     0     0   93.27486    0  997  275.20418   93.27486  66.1%     - 1856s
+     0     0   93.27505    0 1012  275.20418   93.27505  66.1%     - 1873s
+     0     0   93.27506    0 1001  275.20418   93.27506  66.1%     - 1892s
+     0     0   93.33410    0 2785  275.20418   93.33410  66.1%     - 2052s
+H    0     0                     259.2078800   93.33410  64.0%     - 2056s
+     0     0   93.37647    0 2490  259.20788   93.37647  64.0%     - 2130s
+     0     0   93.37647    0 2490  259.20788   93.37647  64.0%     - 2131s
+     0     0   93.39485    0 3249  259.20788   93.39485  64.0%     - 2193s
+     0     0   93.40022    0 1002  259.20788   93.40022  64.0%     - 2284s
+     0     0   93.40494    0 2975  259.20788   93.40494  64.0%     - 2347s
+     0     0   93.40906    0 3209  259.20788   93.40906  64.0%     - 2405s
+     0     0   93.40914    0 3141  259.20788   93.40914  64.0%     - 2459s
+     0     0   93.41178    0  880  259.20788   93.41178  64.0%     - 2665s
+H    0     0                     254.7078800   93.41178  63.3%     - 2668s
+     0     0   93.45062    0 3333  254.70788   93.45062  63.3%     - 2744s
+     0     0   93.45818    0 3660  254.70788   93.45818  63.3%     - 2801s
+     0     0   93.47002    0 3415  254.70788   93.47002  63.3%     - 2873s
+     0     0   93.47966    0 3780  254.70788   93.47966  63.3%     - 2943s
+     0     0   93.48537    0 3780  254.70788   93.48537  63.3%     - 3010s
+     0     0   93.48727    0 1918  254.70788   93.48727  63.3%     - 3096s
+     0     0   93.48835    0 3956  254.70788   93.48835  63.3%     - 3178s
+     0     0   93.48871    0 3860  254.70788   93.48871  63.3%     - 3257s
+     0     0   93.48915    0 3927  254.70788   93.48915  63.3%     - 3365s
+     0     0   93.48928    0 3706  254.70788   93.48928  63.3%     - 3475s
+
+Cutting planes:
+  Learned: 238
+  Lift-and-project: 136
+  Cover: 452
+  Implied bound: 3547
+  Projected implied bound: 13
+  Clique: 419
+  MIR: 303
+  StrongCG: 561
+  Flow cover: 2358
+  Zero half: 157
+  RLT: 165
+  Relax-and-lift: 782
+  BQP: 11
+
+Explored 1 nodes (901111 simplex iterations) in 3606.93 seconds (11759.09 work units)
+Thread count was 8 (of 24 available processors)
+
+Solution count 10: 254.708 254.708 259.208 ... 479.9
+
+Time limit reached
+Warning: max constraint violation (1.2452e-04) exceeds tolerance
+Warning: max bound violation (1.2452e-04) exceeds tolerance
+Best objective 2.547078799960e+02, best bound 9.348928056993e+01, gap 63.2955%

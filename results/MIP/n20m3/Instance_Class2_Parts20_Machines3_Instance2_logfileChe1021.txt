@@ -1,0 +1,111 @@
+
+Gurobi 10.0.0 (win64) logging started Sun Jan 21 05:20:06 2024
+
+Set parameter LogFile to value "C:/Users\Administrator\Documents\BNC_Repo\BNC_Tests\10_MIP_Results\n20m3\Instance_Class2_Parts20_Machines3_Instance2_logfileChe1021.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (win64)
+
+CPU model: AMD EPYC 7513 32-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 24 physical cores, 24 logical processors, using up to 8 threads
+
+Optimize a model with 20457 rows, 3461 columns and 100651 nonzeros
+Model fingerprint: 0xb29ad18b
+Variable types: 1361 continuous, 2100 integer (2100 binary)
+Coefficient statistics:
+  Matrix range     [3e-06, 5e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 8352 rows and 1420 columns
+Presolve time: 0.69s
+Presolved: 12105 rows, 2041 columns, 91557 nonzeros
+Variable types: 101 continuous, 1940 integer (1880 binary)
+Found heuristic solution: objective 451.4014600
+Found heuristic solution: objective 178.7938000
+Root relaxation presolved: 12105 rows, 2041 columns, 91557 nonzeros
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root relaxation: objective 1.725411e+01, 1751 iterations, 0.44 seconds (0.43 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   17.25411    0  122  178.79380   17.25411  90.3%     -    1s
+H    0     0                     152.6602200   17.25411  88.7%     -    2s
+     0     0   17.64075    0  382  152.66022   17.64075  88.4%     -    3s
+     0     0   17.64075    0  373  152.66022   17.64075  88.4%     -    3s
+H    0     0                     127.2570600   17.64075  86.1%     -    3s
+     0     0   17.64076    0  292  127.25706   17.64076  86.1%     -    3s
+H    0     0                      98.8869800   18.06106  81.7%     -    5s
+H    0     0                      33.4814800   18.06106  46.1%     -    5s
+     0     0   18.08476    0  150   33.48148   18.08476  46.0%     -    5s
+H    0     0                      33.2384400   18.08476  45.6%     -    5s
+H    0     0                      29.2803600   18.11347  38.1%     -    5s
+     0     0   18.11845    0  164   29.28036   18.11845  38.1%     -    6s
+     0     0   18.12548    0  163   29.28036   18.12548  38.1%     -    6s
+     0     0   18.12548    0  167   29.28036   18.12548  38.1%     -    6s
+H    0     0                      29.0373200   18.13436  37.5%     -    7s
+     0     0   18.13436    0  239   29.03732   18.13436  37.5%     -    7s
+     0     0   18.13436    0  230   29.03732   18.13436  37.5%     -    7s
+H    0     0                      27.8623500   18.13469  34.9%     -    7s
+     0     0   18.13469    0  220   27.86235   18.13469  34.9%     -    7s
+     0     0   18.13469    0  223   27.86235   18.13469  34.9%     -    7s
+     0     0   18.18207    0  262   27.86235   18.18207  34.7%     -   10s
+     0     0   18.18256    0  163   27.86235   18.18256  34.7%     -   10s
+H    0     0                      26.4495200   18.18256  31.3%     -   10s
+     0     0   18.18312    0  165   26.44952   18.18312  31.3%     -   10s
+     0     0   18.18312    0  101   26.44952   18.18312  31.3%     -   11s
+H    0     0                      25.8399200   18.18312  29.6%     -   11s
+H    0     0                      24.6841000   18.18312  26.3%     -   11s
+H    0     0                      24.5841000   18.18312  26.0%     -   11s
+     0     0   18.58070    0  199   24.58410   18.58070  24.4%     -   11s
+     0     0   18.58070    0  199   24.58410   18.58070  24.4%     -   11s
+     0     0   18.78074    0  177   24.58410   18.78074  23.6%     -   11s
+     0     0   18.79699    0  195   24.58410   18.79699  23.5%     -   11s
+     0     0   18.80578    0  193   24.58410   18.80578  23.5%     -   11s
+     0     0   18.84546    0  195   24.58410   18.84546  23.3%     -   11s
+     0     0   19.33471    0  230   24.58410   19.33471  21.4%     -   12s
+     0     0   19.33471    0  160   24.58410   19.33471  21.4%     -   12s
+     0     0   19.33471    0  200   24.58410   19.33471  21.4%     -   12s
+     0     0   19.33471    0  218   24.58410   19.33471  21.4%     -   12s
+H    0     0                      20.4858400   19.33471  5.62%     -   12s
+     0     0   19.33471    0  175   20.48584   19.33471  5.62%     -   12s
+     0     0   19.33471    0  124   20.48584   19.33471  5.62%     -   12s
+     0     2   19.33471    0  116   20.48584   19.33471  5.62%     -   13s
+H   78    53                      20.4191000   19.33471  5.31%   218   13s
+H  209   134                      20.3478100   19.33471  4.98%   115   14s
+H  242   146                      20.3066500   19.33471  4.79%   104   14s
+   768   452   19.33471   16   53   20.30665   19.33471  4.79%  51.6   15s
+H 1020   468                      20.2801400   19.33471  4.66%  46.0   16s
+H 1746   817                      20.1168400   19.33471  3.89%  39.7   17s
+  1810   813   19.89841   32  150   20.11684   19.33471  3.89%  39.2   20s
+* 2540   909              56      19.6702600   19.33471  1.71%  41.9   24s
+* 2647   894              52      19.4333400   19.33471  0.51%  41.0   24s
+H 2705   838                      19.4159800   19.33471  0.42%  40.3   24s
+* 2998   756              48      19.3682400   19.33471  0.17%  38.2   24s
+  3263   616 infeasible   29        19.36824   19.33471  0.17%  36.9   25s
+
+Cutting planes:
+  Learned: 3
+  Gomory: 35
+  Lift-and-project: 9
+  Cover: 100
+  Implied bound: 110
+  Projected implied bound: 6
+  Clique: 13
+  MIR: 19
+  StrongCG: 4
+  Flow cover: 184
+  GUB cover: 1
+  Zero half: 7
+  RLT: 22
+  Relax-and-lift: 20
+
+Explored 5098 nodes (173621 simplex iterations) in 26.77 seconds (19.55 work units)
+Thread count was 8 (of 24 available processors)
+
+Solution count 10: 19.3682 19.3682 19.416 ... 20.4191
+
+Optimal solution found (tolerance 7.00e-06)
+Best objective 1.936824000000e+01, best bound 1.936824000000e+01, gap 0.0000%

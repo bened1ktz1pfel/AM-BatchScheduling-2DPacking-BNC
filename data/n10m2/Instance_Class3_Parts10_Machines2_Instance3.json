@@ -1,0 +1,89 @@
+{
+  "MachineCount": 2,
+  "MachineTypes": 2,
+  "PartCount": 10,
+  "Machine 0": {
+    "MachineId": 0,
+    "Count": 1,
+    "ScanTime": 0.00434,
+    "RecoatTime": 0.17,
+    "Setup": 2.0,
+    "Length": 40.0,
+    "Width": 40.0,
+    "Height": 25.0
+  },
+  "Machine 1": {
+    "MachineId": 1,
+    "Count": 1,
+    "ScanTime": 0.00723,
+    "RecoatTime": 0.23,
+    "Setup": 1.5,
+    "Length": 25.0,
+    "Width": 25.0,
+    "Height": 20
+  },
+  "Part 0": {
+    "PartId": 0,
+    "Count": 2,
+    "Length": 24,
+    "Width": 12,
+    "Height": 5,
+    "SupportVolume": 0,
+    "Volume": 270
+  },
+  "Part 1": {
+    "PartId": 1,
+    "Count": 2,
+    "Length": 22,
+    "Width": 3,
+    "Height": 23,
+    "SupportVolume": 0,
+    "Volume": 457
+  },
+  "Part 2": {
+    "PartId": 2,
+    "Count": 1,
+    "Length": 26,
+    "Width": 17,
+    "Height": 21,
+    "SupportVolume": 0,
+    "Volume": 7312
+  },
+  "Part 3": {
+    "PartId": 3,
+    "Count": 1,
+    "Length": 16,
+    "Width": 20,
+    "Height": 25,
+    "SupportVolume": 0,
+    "Volume": 5986
+  },
+  "Part 4": {
+    "PartId": 4,
+    "Count": 2,
+    "Length": 11,
+    "Width": 17,
+    "Height": 9,
+    "SupportVolume": 0,
+    "Volume": 910
+  },
+  "Part 5": {
+    "PartId": 5,
+    "Count": 1,
+    "Length": 20,
+    "Width": 13,
+    "Height": 20,
+    "SupportVolume": 0,
+    "Volume": 820
+  },
+  "Part 6": {
+    "PartId": 6,
+    "Count": 1,
+    "Length": 13,
+    "Width": 7,
+    "Height": 16,
+    "SupportVolume": 0,
+    "Volume": 309
+  },
+  "PartTypes": 7
+}

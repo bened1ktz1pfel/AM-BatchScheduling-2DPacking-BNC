@@ -1,0 +1,87 @@
+
+Gurobi 10.0.0 (win64) logging started Fri Jan 26 07:55:42 2024
+
+Set parameter LogFile to value "C:/Users\Administrator\Documents\BNC_Repo\BNC_Tests\10_MIP_Results\n10m2\Instance_Class4_Parts10_Machines2_Instance3_logfileChe21.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (win64)
+
+CPU model: AMD EPYC 7513 32-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 24 physical cores, 24 logical processors, using up to 8 threads
+
+Optimize a model with 2578 rows, 701 columns and 11224 nonzeros
+Model fingerprint: 0xc3419324
+Variable types: 261 continuous, 440 integer (440 binary)
+Coefficient statistics:
+  Matrix range     [4e-06, 5e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 6e+02]
+Presolve removed 1011 rows and 231 columns
+Presolve time: 0.02s
+Presolved: 1567 rows, 470 columns, 10802 nonzeros
+Variable types: 40 continuous, 430 integer (410 binary)
+Found heuristic solution: objective 176.4314000
+Root relaxation presolved: 1567 rows, 470 columns, 10802 nonzeros
+
+
+Root relaxation: objective 4.314039e+01, 1742 iterations, 0.08 seconds (0.12 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   43.14039    0   38  176.43140   43.14039  75.5%     -    0s
+H    0     0                     114.8909600   43.14039  62.5%     -    0s
+H    0     0                     103.0199800   43.14039  58.1%     -    0s
+H    0     0                      67.5441800   43.30151  35.9%     -    0s
+H    0     0                      66.1198400   43.30151  34.5%     -    0s
+H    0     0                      64.5265600   43.48447  32.6%     -    0s
+     0     0   43.48447    0  115   64.52656   43.48447  32.6%     -    0s
+     0     0   43.48738    0  106   64.52656   43.48738  32.6%     -    0s
+H    0     0                      63.7265600   43.48738  31.8%     -    0s
+     0     0   43.62252    0  105   63.72656   43.62252  31.5%     -    0s
+H    0     0                      58.8027600   43.94348  25.3%     -    0s
+H    0     0                      45.5768600   43.94348  3.58%     -    0s
+     0     0   44.17686    0   96   45.57686   44.17686  3.07%     -    0s
+     0     0   44.50090    0  106   45.57686   44.50090  2.36%     -    0s
+     0     0   44.50090    0   98   45.57686   44.50090  2.36%     -    0s
+     0     0   44.50760    0  107   45.57686   44.50760  2.35%     -    0s
+     0     0   44.50760    0  102   45.57686   44.50760  2.35%     -    0s
+     0     0   44.52814    0   92   45.57686   44.52814  2.30%     -    0s
+     0     0   45.27864    0   87   45.57686   45.27864  0.65%     -    0s
+     0     0   45.44664    0  129   45.57686   45.44664  0.29%     -    0s
+     0     0   45.44664    0  112   45.57686   45.44664  0.29%     -    0s
+     0     0   45.44664    0  114   45.57686   45.44664  0.29%     -    0s
+     0     0   45.44664    0   49   45.57686   45.44664  0.29%     -    0s
+     0     0   45.44664    0   87   45.57686   45.44664  0.29%     -    0s
+     0     0   45.44664    0   50   45.57686   45.44664  0.29%     -    0s
+     0     0   45.44664    0   64   45.57686   45.44664  0.29%     -    0s
+     0     0   45.44664    0  110   45.57686   45.44664  0.29%     -    0s
+     0     0   45.44664    0   83   45.57686   45.44664  0.29%     -    0s
+     0     0   45.44664    0  102   45.57686   45.44664  0.29%     -    0s
+     0     0   45.44664    0  108   45.57686   45.44664  0.29%     -    0s
+     0     0   45.52912    0   80   45.57686   45.52912  0.10%     -    1s
+     0     0   45.52912    0   74   45.57686   45.52912  0.10%     -    1s
+     0     2   45.52912    0   69   45.57686   45.52912  0.10%     -    1s
+
+Cutting planes:
+  Learned: 23
+  Gomory: 10
+  Lift-and-project: 4
+  Cover: 82
+  Implied bound: 65
+  Clique: 14
+  MIR: 49
+  StrongCG: 12
+  Flow cover: 274
+  GUB cover: 6
+  Inf proof: 1
+  Zero half: 5
+  RLT: 11
+  Relax-and-lift: 76
+
+Explored 280 nodes (12604 simplex iterations) in 1.34 seconds (1.45 work units)
+Thread count was 8 (of 24 available processors)
+
+Solution count 10: 45.5769 45.5769 58.8028 ... 176.431
+
+Optimal solution found (tolerance 7.00e-06)
+Best objective 4.557686000000e+01, best bound 4.557686000000e+01, gap 0.0000%

@@ -1,0 +1,63 @@
+
+Gurobi 10.0.0 (win64) logging started Fri Jan 19 23:10:58 2024
+
+Set parameter LogFile to value "C:/Users\Administrator\Documents\BNC_Repo\BNC_Tests\10_MIP_Results\Che_ht1_MHU\ht1_10_logfileChe1021.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (win64)
+
+CPU model: AMD EPYC 7513 32-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 24 physical cores, 24 logical processors, using up to 8 threads
+
+Optimize a model with 14158 rows, 2601 columns and 69744 nonzeros
+Model fingerprint: 0xbadf80af
+Variable types: 921 continuous, 1680 integer (1680 binary)
+Coefficient statistics:
+  Matrix range     [3e-05, 2e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+04]
+Presolve removed 7187 rows and 1052 columns
+Presolve time: 0.14s
+Presolved: 6971 rows, 1549 columns, 48727 nonzeros
+Variable types: 80 continuous, 1469 integer (1429 binary)
+Found heuristic solution: objective 172.3433715
+Found heuristic solution: objective 67.1568502
+Root relaxation presolved: 6971 rows, 1549 columns, 48727 nonzeros
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root relaxation: objective 4.134394e+01, 3468 iterations, 0.30 seconds (0.50 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   41.34394    0   30   67.15685   41.34394  38.4%     -    0s
+H    0     0                      45.4036864   41.34394  8.94%     -    0s
+H    0     0                      43.5981078   41.34394  5.17%     -    0s
+H    0     0                      41.3439424   41.34394  0.00%     -    0s
+     0     0   41.34394    0  131   41.34394   41.34394  0.00%     -    0s
+
+Cutting planes:
+  Learned: 1
+  Gomory: 30
+  Lift-and-project: 12
+  Cover: 5
+  Implied bound: 76
+  Projected implied bound: 1
+  Clique: 5
+  MIR: 4
+  StrongCG: 11
+  Flow cover: 18
+  Zero half: 1
+  Mod-K: 6
+  RLT: 3
+  Relax-and-lift: 2
+  PSD: 2
+
+Explored 1 nodes (6240 simplex iterations) in 0.85 seconds (1.17 work units)
+Thread count was 8 (of 24 available processors)
+
+Solution count 5: 41.3439 43.5981 45.4037 ... 172.343
+
+Optimal solution found (tolerance 7.00e-06)
+Best objective 4.134394240000e+01, best bound 4.134394240000e+01, gap 0.0000%

@@ -1,0 +1,30 @@
+{
+    "Instance_Class1_Parts10_Machines2_Instance3_21": {
+        "Optimality": 1,
+        "UB": 47.621739999999996,
+        "LB": 47.62173999999999,
+        "Model Runtime": 0.17299985885620117,
+        "ItemAllocation": [
+            [
+                [
+                    1,
+                    2,
+                    5,
+                    6,
+                    8,
+                    9
+                ]
+            ],
+            [
+                [
+                    0,
+                    3,
+                    7
+                ],
+                [
+                    4
+                ]
+            ]
+        ]
+    }
+}
