@@ -309,7 +309,7 @@ if __name__ == "__main__":
             'TimeLimit': 3600,
             'PreSolveTimeFraction': 0.1, # Only relevant if PreSolve is True
             'PreSolveAreaRestriction': 0.9, # Only relevant if PreSolve is True
-            'OrthogonalPackingMethod': OrthogonalPackingMethod.CPLEX,
+            'OrthogonalPackingMethod': OrthogonalPackingMethod.ORTOOLS,
             'Threads': 8,
             'MIPTolerance': 0.00001,
             'Seeds': [22]
