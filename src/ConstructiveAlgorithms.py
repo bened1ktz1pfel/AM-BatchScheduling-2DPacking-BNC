@@ -400,26 +400,3 @@ def SFF (parts, machine):
     
     return True
 
-
-
-if __name__ == "__main__":
-    from DataManager import *
-    import time
-    import os
-    
-    for file in os.listdir("U:/Zipfel/01 - Additive_Manufacturing/02 - AdditiveManufacturing Tests/02 - Testdata revised/06 - InstancesChe/Test_BnC/testRun_Che_ht2_MAD_3600_MF2_R2"):
-        if file.endswith("1.json") and file.startswith("ht"):
-            s = time.time()
-            data = DataModel(0)
-
-            data.BuildData(os.path.join("U:/Zipfel/01 - Additive_Manufacturing/02 - AdditiveManufacturing Tests/02 - Testdata revised/06 - InstancesChe/Test_BnC/testRun_Che_ht2_MAD_3600_MF2_R2", file))
-
-            Constructive = ConstructiveHeuristic(EvaluateObjective(), SolutionPool(), 3021)
-
-            bestSolution = Constructive.Run(data)
-            print(file)
-            print(bestSolution.Makespan)
-            print(bestSolution.PartPermutation)
-            print(bestSolution.MachineAllocation)
-
-            print(time.time() - s)

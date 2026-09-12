@@ -187,24 +187,3 @@ class CplexOrthogonalPacking2D:
             plt.margins(0)
             plt.show()
 
-if __name__ == "__main__":
-    from DataManager import *
-    from Scheduler import *
-    newData = DataModel(0, True)
-    newData.BuildData(f"C:/Users/Administrator/Documents/BNC_Repo/BNC_Tests/02_TestData/Che_ht2_MHU/ht2_11.json")
-
-    tmpParts = [part for p, part in enumerate(newData.Parts)]
-    print([(part.Variants[0].Width, part.Variants[0].Length) for part in tmpParts])
-    binPacking2D = CplexOrthogonalPacking2D()
-    # newData.Machines[1].Length = 130
-    binPacking2D.AddParts(tmpParts)
-    binPacking2D.AddBin(newData.Machines[1])
-
-
-    binPacking2D.CreateVariables(PlacementPointStrategy.MinimalMeetInTheMiddle)
-    binPacking2D.CreateConstraints()
-
-    tmpModel = MachineScheduling("sjasdh", 23)
-    tmpModel._Seed = 23
-    isFeasible = binPacking2D.Solve(tmpModel, 8, 3600)
-    print(isFeasible)

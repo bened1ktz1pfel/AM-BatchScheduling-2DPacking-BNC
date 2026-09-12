@@ -183,40 +183,4 @@ class RelaxedPacker:
         # print(f"Runtime: {self.model.Runtime}")
         return self.model.status == GRB.INFEASIBLE
 
-if __name__ == "__main__":
-    # data = DataManager.DataModel(0, True)
-
-    # data.BuildData("U:/Zipfel/01 - Additive_Manufacturing/02 - AdditiveManufacturing Tests/02 - Testdata revised/09 - Finaltest_BnCvsMIP/ht2_2.json")
-        
-    # machineId = 1
-    # machine = data.Machines[machineId]
-    # partIds = [ 11,
-    #                     12,
-    #                     15,
-    #                     16,
-    #                     19,
-    #                     20,
-    #                     21,
-    #                     23,
-    #                     25,
-    #                     26,
-    #                     27,
-    #                     28,
-    #                     34,
-    #                     35,
-    #                     38,
-    #                     39,
-    #                     46]
-
-    # tmpItems = [(item.Variants[0].Width, item.Variants[0].Length) for i, item in enumerate(data.Parts) if item.PartId in partIds]
-
-    newRelaxedModel = RelaxedPacker(11)
-    newRelaxedModel.AddItems([(28, 22), (28, 28)])
-    newRelaxedModel.AddBin(50, 28)
-    newRelaxedModel.CreateConservativeScales([0.01, 0.1, 0.2, 0.3, 0.4, 0.49], [0.01, 0.1, 0.2, 0.3, 0.4, 0.49])
-    newRelaxedModel.CreateConservativeScales2()
-    newRelaxedModel.DetermineConservativeScaledAreas()
-    newRelaxedModel.CreateVariables()
-    newRelaxedModel.CreateConstraints()
-    print(newRelaxedModel.Solve(6, 10))
 
