@@ -109,7 +109,7 @@ class SchedulingAndPackingBnCSolver:
         currentWorkingDirectory = os.path.basename(inputPath.replace("\\", "/").rstrip("/"))
 
         if currentWorkingDirectory != "Test":
-            mipSolutionPath = os.path.join('./BNC_Tests/03_MIP_Results', f'{currentWorkingDirectory}')
+            mipSolutionPath = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'results', 'MIP', f'{currentWorkingDirectory}')
             fullmipPath = os.path.join(mipSolutionPath,f'{fileName}_Sol_21.json')
 
             with open(fullmipPath, "r") as mipFile:
@@ -613,11 +613,9 @@ if __name__ == "__main__":
         },
     }
 
-    # testpath = 'C:/Users/Administrator/Documents/BNC_Repo/BNC_Tests/02_TestData'
-    path = './BNC_Tests/02_TestData'
-    splittedpath = path.split("/")[:-1]
-    splittedpath = [splittedpath[0] + "/" + splittedpath[1]] + splittedpath[2:]
-    baseOutputPath = os.path.join(*splittedpath)
+    baseDir = os.path.dirname(os.path.abspath(__file__))
+    path = os.path.join(baseDir, '..', 'data')
+    baseOutputPath = os.path.join(baseDir, '..', 'results')
 
     specs = sys.argv[1]
 
@@ -632,7 +630,7 @@ if __name__ == "__main__":
 
             inputPath = os.path.join(path, folder)
 
-            outputFolderPath = os.path.join(baseOutputPath, f'10_FINAL_BNC_{solverParams["ShortName"]}_Results')
+            outputFolderPath = os.path.join(baseOutputPath, f'BNC_{solverParams["ShortName"]}')
             if not os.path.exists(outputFolderPath):
                 os.mkdir(outputFolderPath)
 
