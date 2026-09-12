@@ -35,8 +35,8 @@ requirements.txt            Python dependencies
 PlanningProblem.jpg         Illustration of the planning problem
 
 src/
-  Solver.py                 B&C solver orchestrator; wires scheduler, packing, preprocessing and callbacks
-  Scheduler.py              Gurobi MIP for the scheduling master problem (parts → batches → machines, min makespan)
+  Solver.py                 B&C solver orchestrator; wires scheduler, packing, preprocessing and callbacks; CLI entry point
+  Scheduler.py              Gurobi MIP for the scheduling master problem (parts -> batches -> machines, min makespan)
   SchedulingCallback.py     Gurobi lazy-constraint callback adding packing feasibility cuts at integer nodes
   StrippackingCallback.py   Gurobi callback enforcing strip-packing feasibility cuts within a 1D arc-flow model
   ConstructiveAlgorithms.py Constructive heuristic to provide an initial feasible solution
@@ -45,7 +45,7 @@ src/
   Helper.py                 Helper functions
   OrthogonalPacker.py       OR-Tools CP-SAT model for 2D orthogonal packing feasibility checking
   OrthogonalPackerCplex.py  CPLEX CP Optimizer alternative for the 2D packing feasibility sub-problem
-  OrthogonalRelaxation.py   Gurobi LP relaxation of the 2D packing problem using Fekete–Schepers conservative scales
+  OrthogonalRelaxation.py   Gurobi LP relaxation of the 2D packing problem using Fekete-Schepers conservative scales
   BarRelaxation.py          Column generation approach as a feasibility check for the packing sub-problem
   OneDimContBinPacker.py    Gurobi MIP for 1D continuous bin packing used as a relaxation
   LowerBounds.py            Area-based lower bounds on required bins for 2D bin packing (Dell'Amico et al. 2002)
@@ -54,11 +54,11 @@ src/
   KnapSack.py               2D Knapsack problem to lift the no-good cuts
   LiftingLP.py              Lifting procedure for the strip-packing callback when OrthogonalPackingMethod.BNC is active
 
-data/                       Test instances (n10m2 … n80m5) and packing benchmark data
+data/                       Test instances (n10m2 ... n80m5) and packing benchmark data
 
 results/
-  BNC_FORT/                 B&C results — full rotation variant
-  BNC_PORT/                 B&C results — partial rotation variant
+  BNC_FORT/                 B&C results — full variant (OR-Tools)
+  BNC_PORT/                 B&C results — full variant with pre-solve (OR-Tools)
   BNC_TV/                   B&C results — test variant
   MIP/                      Monolithic MIP results
 ```
@@ -85,13 +85,13 @@ pip install -r requirements.txt
 python main.py
 ```
 
-Expected Output (Gurobi solver log omitted):
+Expected output (Gurobi solver log omitted):
 
 ```
 This is a demo run of the BNC solver for scheduling with 2D orthogonal packing.
 ================================
 ...
-Finished processing folder: n10m2. Results saved in: results/BNC_TV_demo/n10m2
+Finished processing folder: n10m2. Results saved in: .../results/BNC_TV_demo/n10m2
 ================================
 ```
 
@@ -103,8 +103,23 @@ Further solver options are available using Solver.py from the command line. For 
 python src/Solver.py [foldername] [Solvervariant_id]
 ```
 
-## Results
+**Example:** `python src/Solver.py n10m2 3` runs the full OR-Tools variant on the n10m2 instances.
 
-## Limitations
+Available solver variants:
+
+| ID | Short name | Description |
+|----|------------|-------------|
+| 1  | TV         | Test variant (CPLEX packing) |
+| 2  | BV         | Base variant — no preprocessing, no relaxations |
+| 3  | FORT       | Full variant (OR-Tools packing) |
+| 6  | PORT       | Full variant with two-step pre-solve (OR-Tools) |
+| 7  | FORTNCL    | Full variant without cut lifting (OR-Tools) |
+| 8  | FINORT     | Final variant (OR-Tools), no packing heuristics |
+| 9  | FINCP      | Final variant (CPLEX packing), no packing heuristics |
+| 10 | FINBNC     | Final variant (Cython B&B packing), no packing heuristics |
+| 11 | BPV        | Base-plus variant — model improvements only |
+| 12 | NISV       | No initial solution variant |
+| 13 | NPHNLV     | No packing heuristic, no lifting |
+| 14 | NPHV       | No packing heuristic, with lifting |
 
 Last tested using Python 3.9 and GUROBI 12.0.3 in September 2026.
