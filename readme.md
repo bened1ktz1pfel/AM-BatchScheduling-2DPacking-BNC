@@ -77,8 +77,8 @@ $^{**}$ : Installation required if OrthogonalPackingMethod.CPLEX is chosen
 To quickly run and test the code, no GUROBI licence is needed. The free version coming with installing gurobipy package enables the solving of small instances stated in main.py.
 
 ```bash
-git clone https://github.com/bened1ktz1pfel/BNC-for-Scheduling-with-2DOPR.git
-cd BNC-for-Scheduling-with-2DOPR
+git clone https://github.com/bened1ktz1pfel/AM-BatchScheduling-2DPacking-BNC.git
+cd AM-BatchScheduling-2DPacking-BNC
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
